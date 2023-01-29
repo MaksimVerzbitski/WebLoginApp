@@ -16,7 +16,7 @@
         //print_r($_POST);
          
         if(!isset($_GET['page'])){
-            include "modules/main_page.php";}
+            include "views/modules/main_page.php";}
         ?>
                 
         

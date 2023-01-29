@@ -24,3 +24,10 @@ body{
 .form-group{
     margin-bottom:30px;
 }
+
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .container, .body, .center, .form-group {
+      width: 100%;
+    }
+  }

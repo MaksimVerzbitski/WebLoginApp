@@ -9,6 +9,8 @@
         $password = $_POST["password"];
         $passwordRepeat = $_POST["repeat_password"];
 
+        $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
         $errors = array();
 
         if(empty($fullName) OR empty($email) OR empty($password) OR empty($passwordRepeat)){
@@ -28,6 +30,8 @@
             {
                 echo "<div class='alert alert-danger'>$error</div>";
             }
+        } else {
+            require_once "database/database.php";
         }
     }
 
