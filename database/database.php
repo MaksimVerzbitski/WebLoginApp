@@ -1,16 +1,14 @@
-<?php
 
-$hostName = "localhost";
-$dbUser = "tpqaqkwg_Franix90";
-//$dbUser = "Franix90";
-$dbPassword = "AjorDan1517";
-$dbName = "tpqaqkwg_votes";
-
-$conn=mysqli_connect($hostName,$dbUser,$dbPassword,$dbName);
-
-if(!$conn){
-    die("Something went wrong!");
+<?php session_start();
+$databaseHost='localhost';
+$databaseUser='tpqaqkwg_Maksim'; 
+$databasePassword=' AjorDan1517'; 
+$databaseName='tpqaqkwg_votes';
+try {
+  $conn = new PDO("mysql:host=".$databaseHost.";dbname=".$databaseName, $databaseUser, $databasePassword);
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo 'Database Connected Successfully'; 
+} catch(PDOException $error) {
+  echo "Something went wrong " . $error->getMessage();
 }
-
-
 ?>
