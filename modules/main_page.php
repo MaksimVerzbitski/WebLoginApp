@@ -3,8 +3,7 @@
   <img src="pictures/vote.png" class="center"  class="rounded mx-auto d-block" alt="...">
 </div> 
 <br></br>
-<div class="container">
-        <?php
+<?php
         if (isset($_POST["submit"])) {
            $fullName = $_POST["fullname"];
            $email = $_POST["email"];
@@ -27,7 +26,7 @@
            if ($password!==$passwordRepeat) {
             array_push($errors,"Password does not match");
            }
-           require_once "database.php";
+           require_once "database/database.php";
            $sql = "SELECT * FROM users WHERE email = '$email'";
            $result = mysqli_query($conn, $sql);
            $rowCount = mysqli_num_rows($result);
