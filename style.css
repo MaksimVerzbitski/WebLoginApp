@@ -19,6 +19,7 @@ body{
     width: 50%;
     max-width:200px;
     height:auto;
+    object-position: top;
   }
 
 .form-group{

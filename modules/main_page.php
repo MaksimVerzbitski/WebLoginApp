@@ -2,6 +2,7 @@
 <div class = "col-12">
   <img src="pictures/vote.png" class="center"  class="rounded mx-auto d-block" alt="...">
 </div> 
+<br></br>
     <?php 
     if(isset($_POST["submit"])){
         $fullName = $_POST["fullname"];
