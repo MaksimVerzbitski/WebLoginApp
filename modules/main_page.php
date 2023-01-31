@@ -35,7 +35,7 @@
             require_once "database/database.php";
             $sql = "INSERT INTO registration_users(full_name, email, password) VALUES (?, ?, ? )";
             $stmt = mysqli_stmt_init($conn);
-            $prepareStmt = mysqli_stmt_prepare($stmt,$conn);
+            $prepareStmt = mysqli_stmt_prepare($stmt,$sql);
             if(prepareStmt)
             {
                 mysqli_stmt_bind_param($stmt,"sss",$fullName, $email, $passwordHash);
